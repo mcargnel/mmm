@@ -49,11 +49,16 @@ mmm/
 ├── README.md              # Project overview (this file)
 ├── DOCKER.md              # Detailed Docker guide
 ├── mmm.ipynb              # Jupyter notebook with analysis
+├── build_docs.sh          # Quick documentation builder
 ├── src/                   # Source code
 │   ├── data_generation.py # Synthetic data creation
 │   ├── linear_regression.py # Custom regression implementation
 │   ├── contributions.py   # ROI and attribution calculations
 │   └── utils.py           # Helper functions (adstock, saturation)
+├── docs/                  # Sphinx documentation
+│   ├── source/            # Documentation source files
+│   ├── build/             # Generated documentation
+│   └── Makefile           # Sphinx build commands
 ├── .github/workflows/     # CI/CD pipeline
 └── venv_mmm_310/          # Virtual environment
 ```
@@ -136,5 +141,26 @@ exit
 - **Local Testing**: Use virtual environment for quick iterations
 - **Integration Testing**: Use Docker for complete testing
 - **CI/CD Testing**: Automated testing on clean environment
+
+## Documentation
+
+This project includes comprehensive documentation built with Sphinx:
+
+### View Documentation
+```bash
+# Build the documentation
+./build_docs.sh
+
+# Or manually
+cd docs && make html
+```
+
+### Documentation Structure
+- **Theory**: Mathematical foundations of MMM
+- **API Reference**: Auto-generated from code docstrings
+- **Tutorials**: Step-by-step guides
+- **Examples**: Practical use cases
+
+The documentation is available at `docs/build/html/index.html` after building.
 
 **Remember**: This project is about learning and understanding MMM from first principles. Take time to experiment with parameters, understand the mathematics, and build intuition for how marketing mix modeling works!

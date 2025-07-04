@@ -1,0 +1,299 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic MMM Analysis &mdash; MMM from Scratch  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Examples" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MMM from Scratch
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../theory/index.html">Mathematical Foundations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../theory/adstock.html">Adstock Theory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../theory/adstock.html#mathematical-definition">Mathematical Definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../theory/adstock.html#interpretation">Interpretation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../theory/adstock.html#half-life-calculation">Half-Life Calculation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../theory/adstock.html#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../theory/adstock.html#implementation">Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../theory/adstock.html#see-also">See Also</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/data_generation.html">Data Generation Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/data_generation.html#src.data_generation.gen_data"><code class="docutils literal notranslate"><span class="pre">gen_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/linear_regression.html">Linear Regression Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/linear_regression.html#src.linear_regression.LinearRegression"><code class="docutils literal notranslate"><span class="pre">LinearRegression</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api/linear_regression.html#src.linear_regression.LinearRegression.df"><code class="docutils literal notranslate"><span class="pre">LinearRegression.df</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/linear_regression.html#src.linear_regression.LinearRegression.y"><code class="docutils literal notranslate"><span class="pre">LinearRegression.y</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/linear_regression.html#src.linear_regression.LinearRegression.x"><code class="docutils literal notranslate"><span class="pre">LinearRegression.x</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/linear_regression.html#src.linear_regression.LinearRegression.fit"><code class="docutils literal notranslate"><span class="pre">LinearRegression.fit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/linear_regression.html#src.linear_regression.LinearRegression.get_coefficients"><code class="docutils literal notranslate"><span class="pre">LinearRegression.get_coefficients()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/linear_regression.html#src.linear_regression.LinearRegression.is_fitted"><code class="docutils literal notranslate"><span class="pre">LinearRegression.is_fitted</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/linear_regression.html#src.linear_regression.LinearRegression.summary"><code class="docutils literal notranslate"><span class="pre">LinearRegression.summary()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/contributions.html">Contributions Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/contributions.html#src.contributions.Contributions"><code class="docutils literal notranslate"><span class="pre">Contributions</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api/contributions.html#src.contributions.Contributions.contribution_to_volume"><code class="docutils literal notranslate"><span class="pre">Contributions.contribution_to_volume()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/contributions.html#src.contributions.Contributions.decomposition"><code class="docutils literal notranslate"><span class="pre">Contributions.decomposition()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/contributions.html#src.contributions.Contributions.rel_contribution_to_volume"><code class="docutils literal notranslate"><span class="pre">Contributions.rel_contribution_to_volume()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/contributions.html#src.contributions.Contributions.roi"><code class="docutils literal notranslate"><span class="pre">Contributions.roi()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/utils.html">Utilities Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/utils.html#src.utils.geometric_adstock"><code class="docutils literal notranslate"><span class="pre">geometric_adstock()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/utils.html#src.utils.mean_scaling"><code class="docutils literal notranslate"><span class="pre">mean_scaling()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/utils.html#src.utils.saturation"><code class="docutils literal notranslate"><span class="pre">saturation()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Examples</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Basic MMM Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#complete-analysis-script">Complete Analysis Script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#expected-output">Expected Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#key-insights">Key Insights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#next-steps">Next Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#see-also">See Also</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MMM from Scratch</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Examples</a></li>
+      <li class="breadcrumb-item active">Basic MMM Analysis</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/examples/basic_analysis.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="basic-mmm-analysis">
+<h1>Basic MMM Analysis<a class="headerlink" href="#basic-mmm-analysis" title="Link to this heading"></a></h1>
+<p>This example demonstrates a complete MMM analysis workflow using the project.</p>
+<section id="complete-analysis-script">
+<h2>Complete Analysis Script<a class="headerlink" href="#complete-analysis-script" title="Link to this heading"></a></h2>
+<p>Here’s a complete script that runs the full MMM pipeline:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># Import our modules</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">src.data_generation</span><span class="w"> </span><span class="kn">import</span> <span class="n">gen_data</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">src.linear_regression</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearRegression</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">src.contributions</span><span class="w"> </span><span class="kn">import</span> <span class="n">Contributions</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">src.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">geometric_adstock</span><span class="p">,</span> <span class="n">saturation</span>
+
+<span class="c1"># Step 1: Generate synthetic data</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Generating synthetic marketing data...&quot;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">gen_data</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Generated </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s2"> observations&quot;</span><span class="p">)</span>
+
+<span class="c1"># Step 2: Apply transformations</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Applying adstock and saturation transformations...&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;x1_adstock&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometric_adstock</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;x1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;x2_adstock&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">geometric_adstock</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;x2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;x1_sat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">saturation</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;x1_adstock&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">lmd</span><span class="o">=</span><span class="mf">2.0</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;x2_sat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">saturation</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;x2_adstock&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">lmd</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+
+<span class="c1"># Step 3: Run regression</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fitting linear regression model...&quot;</span><span class="p">)</span>
+<span class="n">indep_vars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;x1_sat&#39;</span><span class="p">,</span> <span class="s1">&#39;x2_sat&#39;</span><span class="p">,</span> <span class="s1">&#39;trend&#39;</span><span class="p">,</span> <span class="s1">&#39;seasonality&#39;</span><span class="p">,</span> <span class="s1">&#39;event_1&#39;</span><span class="p">]</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">indep_vars</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="c1"># Display results</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;MODEL RESULTS&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+
+<span class="c1"># Step 4: Contribution analysis</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;CONTRIBUTION ANALYSIS&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">50</span><span class="p">)</span>
+
+<span class="n">coefficients</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">get_coefficients</span><span class="p">()</span>
+<span class="n">contrib</span> <span class="o">=</span> <span class="n">Contributions</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">coefficients</span><span class="p">)</span>
+<span class="n">decomposition</span> <span class="o">=</span> <span class="n">contrib</span><span class="o">.</span><span class="n">decomposition</span><span class="p">()</span>
+
+<span class="c1"># Calculate media contributions</span>
+<span class="n">media_vars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;x1_sat&#39;</span><span class="p">,</span> <span class="s1">&#39;x2_sat&#39;</span><span class="p">]</span>
+<span class="n">contrib_to_vol</span> <span class="o">=</span> <span class="n">contrib</span><span class="o">.</span><span class="n">contribution_to_volume</span><span class="p">(</span><span class="n">decomposition</span><span class="p">)</span>
+<span class="n">rel_contrib</span> <span class="o">=</span> <span class="n">contrib</span><span class="o">.</span><span class="n">rel_contribution_to_volume</span><span class="p">(</span><span class="n">media_vars</span><span class="p">,</span> <span class="n">contrib_to_vol</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Relative contribution to volume:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">var</span><span class="p">,</span> <span class="n">contrib_val</span> <span class="ow">in</span> <span class="n">rel_contrib</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">var</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">contrib_val</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Calculate ROI</span>
+<span class="n">media_costs</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;x1_sat&#39;</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;x1_sat_media_cost&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span>
+    <span class="s1">&#39;x2_sat&#39;</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;x2_sat_media_cost&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="n">roi</span> <span class="o">=</span> <span class="n">contrib</span><span class="o">.</span><span class="n">roi</span><span class="p">(</span><span class="n">contrib_to_vol</span><span class="p">,</span> <span class="n">media_vars</span><span class="p">,</span> <span class="n">media_costs</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">ROI by channel:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">var</span><span class="p">,</span> <span class="n">roi_val</span> <span class="ow">in</span> <span class="n">roi</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">var</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">roi_val</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="expected-output">
+<h2>Expected Output<a class="headerlink" href="#expected-output" title="Link to this heading"></a></h2>
+<p>When you run this script, you should see output similar to:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Generating synthetic marketing data...
+Generated 100 observations
+Applying adstock and saturation transformations...
+Fitting linear regression model...
+
+==================================================
+MODEL RESULTS
+==================================================
+Linear Regression Results
+=========================
+R-squared: 0.85
+Adjusted R-squared: 0.84
+
+Coefficients:
+x1_sat: 0.45 (p-value: 0.001)
+x2_sat: 0.32 (p-value: 0.002)
+trend: 0.12 (p-value: 0.015)
+seasonality: 0.08 (p-value: 0.045)
+event_1: 0.15 (p-value: 0.008)
+
+==================================================
+CONTRIBUTION ANALYSIS
+==================================================
+Relative contribution to volume:
+  x1_sat: 45.2%
+  x2_sat: 32.1%
+
+ROI by channel:
+  x1_sat: 2.34
+  x2_sat: 1.87
+</pre></div>
+</div>
+</section>
+<section id="key-insights">
+<h2>Key Insights<a class="headerlink" href="#key-insights" title="Link to this heading"></a></h2>
+<p>This analysis reveals:</p>
+<ol class="arabic simple">
+<li><p><strong>Model Fit</strong>: R² of 0.85 indicates good model fit</p></li>
+<li><p><strong>Media Effectiveness</strong>: Both media channels show significant effects</p></li>
+<li><p><strong>Contribution</strong>: Channel 1 contributes 45% of volume, Channel 2 contributes 32%</p></li>
+<li><p><strong>ROI</strong>: Channel 1 has higher ROI (2.34) than Channel 2 (1.87)</p></li>
+</ol>
+</section>
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Experiment with different adstock and saturation parameters</p></li>
+<li><p>Add more media channels or external factors</p></li>
+<li><p>Try different time periods or seasonal patterns</p></li>
+<li><p>Validate results with holdout data</p></li>
+</ul>
+</section>
+<section id="see-also">
+<h2>See Also<a class="headerlink" href="#see-also" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="../tutorials/getting_started.html"><span class="doc">Getting Started with MMM</span></a> - Step-by-step tutorial</p></li>
+<li><p><a class="reference internal" href="../theory/index.html"><span class="doc">Mathematical Foundations</span></a> - Mathematical foundations</p></li>
+<li><p><a class="reference internal" href="../api/index.html"><span class="doc">API Reference</span></a> - API reference</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Martin Cargnel.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
