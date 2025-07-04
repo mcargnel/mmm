@@ -1,2 +1,4 @@
 venv_mmm/
 venv_mmm_310/
+.cursor/rules/
+scripts/
