@@ -17,4 +17,4 @@ COPY . .
 ENV PYTHONPATH=/app
 
 # Command to run when container starts
-CMD ["python", "main.py"] 
+CMD ["python", "main.py"]
