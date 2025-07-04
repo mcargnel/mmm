@@ -50,7 +50,8 @@ jobs:
         run: |
           echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
           echo "branch=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
-          echo "branch_clean=${GITHUB_REF#refs/heads/}" | sed 's/[^a-zA-Z0-9]/-/g' >> $GITHUB_OUTPUT
+          BRANCH_CLEAN=$(echo "${GITHUB_REF#refs/heads/}" | sed 's/[^a-zA-Z0-9]/-/g')
+          echo "branch_clean=${BRANCH_CLEAN}" >> $GITHUB_OUTPUT
 
       - name: Build Docker image
         run: |
