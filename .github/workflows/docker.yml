@@ -6,7 +6,31 @@ on:
     tags: [ 'v*' ]
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run tests
+        run: |
+          python -c "from src.linear_regression import LinearRegression; print('✅ LinearRegression imported successfully')"
+          python -c "from src.contributions import Contributions; print('✅ Contributions imported successfully')"
+          python -c "from src.utils import geometric_adstock, saturation; print('✅ Utils imported successfully')"
+          python main.py
+
   build:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -32,6 +56,10 @@ jobs:
         run: |
           docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/mmm-project:${{ steps.vars.outputs.sha_short }} .
           docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/mmm-project:${{ steps.vars.outputs.branch_clean }} .
+
+      - name: Test Docker image
+        run: |
+          docker run --rm ${{ secrets.DOCKERHUB_USERNAME }}/mmm-project:${{ steps.vars.outputs.sha_short }}
 
       - name: Push Docker image
         run: |

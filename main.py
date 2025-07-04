@@ -38,7 +38,3 @@ media_cost_dict = {
 
 
 roi_lm = contrib_lm.roi(contrib_to_vol_lm,media_vars, media_cost_dict)
-
-
-# New feature for development branch
-# Test CI/CD
