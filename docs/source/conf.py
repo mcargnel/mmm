@@ -34,52 +34,32 @@ sys.path.insert(0, os.path.abspath('../..'))
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'alabaster'
+html_theme = 'classic'
 html_static_path = ['_static']
 
-# Theme options for Alabaster theme
+# Theme options for Classic theme
 html_theme_options = {
-    'logo': 'logo.png',
-    'logo_name': True,
-    'logo_text_align': 'center',
-    'description': 'Marketing Mix Model from Scratch',
-    'github_user': 'mcargnel',
-    'github_repo': 'mmm',
-    'github_button': True,
-    'github_type': 'star',
-    'github_count': True,
-    'travis_button': False,
-    'codecov_button': False,
-    'analytics_id': '',
-    'font_family': "'Roboto', Georgia, serif",
-    'head_font_family': "'Roboto', 'Arial', sans-serif",
-    'font_size': '16px',
-    'page_width': '940px',
-    'sidebar_width': '220px',
-    'sidebar_collapse': True,
-    'sidebar_includehidden': True,
-    'navigation_depth': 4,
-    'titles_only': False,
-    'show_powered_by': False,
-    'show_related': True,
-    'show_relbars': True,
-    'show_sphinx': False,
-    'show_source': False,
-    'sidebar_header': '#2980B9',
-    'sidebar_text': '#333',
-    'sidebar_link': '#2980B9',
-    'sidebar_link_underscore': '#2980B9',
-    'sidebar_list': '#666',
-    'sidebar_rss': '#ff6b6b',
-    'sidebar_search_button': '#2980B9',
-    'sidebar_search_button_text': '#fff',
-    'relbar_border': '#2980B9',
-    'relbar_link': '#2980B9',
-    'relbar_link_underscore': '#2980B9',
-    'footer_bg': '#2980B9',
-    'footer_text': '#fff',
-    'footer_link': '#fff',
-    'footer_link_underscore': '#fff'
+    'rightsidebar': False,
+    'stickysidebar': True,
+    'collapsiblesidebar': True,
+    'externalrefs': True,
+    'footerbgcolor': '#2980B9',
+    'footertextcolor': '#ffffff',
+    'sidebarbgcolor': '#f8f9fa',
+    'sidebartextcolor': '#333333',
+    'sidebarlinkcolor': '#2980B9',
+    'relbarbgcolor': '#2980B9',
+    'relbartextcolor': '#ffffff',
+    'relbarlinkcolor': '#ffffff',
+    'bgcolor': '#ffffff',
+    'textcolor': '#333333',
+    'linkcolor': '#2980B9',
+    'visitedlinkcolor': '#8e44ad',
+    'headbgcolor': '#2980B9',
+    'headtextcolor': '#ffffff',
+    'headlinkcolor': '#ffffff',
+    'codebgcolor': '#f8f9fa',
+    'codetextcolor': '#333333'
 }
 
 # Additional options for better GitHub Pages compatibility
