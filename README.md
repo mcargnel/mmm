@@ -163,14 +163,22 @@ cd docs && make html
 
 ### 📖 **View Documentation Online**
 
-Once GitHub Pages is enabled, your documentation will be available at:
+**To enable GitHub Pages:**
+1. Go to your repository: https://github.com/mcargnel/mmm
+2. Click "Settings" → "Pages" (left sidebar)
+3. Source: "Deploy from a branch"
+4. Branch: `development`
+5. Folder: `/docs`
+6. Click "Save"
+
+Your documentation will then be available at:
 **https://mcargnel.github.io/mmm/**
 
 ### 📁 **Direct File Access**
-- [Main Documentation](https://github.com/mcargnel/mmm/blob/development/docs/build/html/index.html)
-- [API Reference](https://github.com/mcargnel/mmm/blob/development/docs/build/html/api/index.html)
-- [Theory Pages](https://github.com/mcargnel/mmm/blob/development/docs/build/html/theory/index.html)
-- [Tutorials](https://github.com/mcargnel/mmm/blob/development/docs/build/html/tutorials/index.html)
+- [Main Documentation](https://github.com/mcargnel/mmm/blob/development/docs/index.html)
+- [API Reference](https://github.com/mcargnel/mmm/blob/development/docs/api/index.html)
+- [Theory Pages](https://github.com/mcargnel/mmm/blob/development/docs/theory/index.html)
+- [Tutorials](https://github.com/mcargnel/mmm/blob/development/docs/tutorials/index.html)
 
 The documentation is also available locally at `docs/build/html/index.html` after building.
 
