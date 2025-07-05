@@ -1,0 +1,234 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adstock Theory &mdash; MMM from Scratch  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="API Reference" href="../api/index.html" />
+    <link rel="prev" title="Mathematical Foundations" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MMM from Scratch
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Mathematical Foundations</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Adstock Theory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mathematical-definition">Mathematical Definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interpretation">Interpretation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#half-life-calculation">Half-Life Calculation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#implementation">Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#see-also">See Also</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/data_generation.html">Data Generation Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/data_generation.html#src.data_generation.gen_data"><code class="docutils literal notranslate"><span class="pre">gen_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/linear_regression.html">Linear Regression Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/linear_regression.html#src.linear_regression.LinearRegression"><code class="docutils literal notranslate"><span class="pre">LinearRegression</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api/linear_regression.html#src.linear_regression.LinearRegression.df"><code class="docutils literal notranslate"><span class="pre">LinearRegression.df</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/linear_regression.html#src.linear_regression.LinearRegression.y"><code class="docutils literal notranslate"><span class="pre">LinearRegression.y</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/linear_regression.html#src.linear_regression.LinearRegression.x"><code class="docutils literal notranslate"><span class="pre">LinearRegression.x</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/linear_regression.html#src.linear_regression.LinearRegression.fit"><code class="docutils literal notranslate"><span class="pre">LinearRegression.fit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/linear_regression.html#src.linear_regression.LinearRegression.get_coefficients"><code class="docutils literal notranslate"><span class="pre">LinearRegression.get_coefficients()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/linear_regression.html#src.linear_regression.LinearRegression.is_fitted"><code class="docutils literal notranslate"><span class="pre">LinearRegression.is_fitted</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/linear_regression.html#src.linear_regression.LinearRegression.summary"><code class="docutils literal notranslate"><span class="pre">LinearRegression.summary()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/contributions.html">Contributions Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/contributions.html#src.contributions.Contributions"><code class="docutils literal notranslate"><span class="pre">Contributions</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api/contributions.html#src.contributions.Contributions.contribution_to_volume"><code class="docutils literal notranslate"><span class="pre">Contributions.contribution_to_volume()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/contributions.html#src.contributions.Contributions.decomposition"><code class="docutils literal notranslate"><span class="pre">Contributions.decomposition()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/contributions.html#src.contributions.Contributions.rel_contribution_to_volume"><code class="docutils literal notranslate"><span class="pre">Contributions.rel_contribution_to_volume()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/contributions.html#src.contributions.Contributions.roi"><code class="docutils literal notranslate"><span class="pre">Contributions.roi()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/utils.html">Utilities Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/utils.html#src.utils.geometric_adstock"><code class="docutils literal notranslate"><span class="pre">geometric_adstock()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/utils.html#src.utils.mean_scaling"><code class="docutils literal notranslate"><span class="pre">mean_scaling()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/utils.html#src.utils.saturation"><code class="docutils literal notranslate"><span class="pre">saturation()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../examples/basic_analysis.html">Basic MMM Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../examples/basic_analysis.html#complete-analysis-script">Complete Analysis Script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/basic_analysis.html#expected-output">Expected Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/basic_analysis.html#key-insights">Key Insights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/basic_analysis.html#next-steps">Next Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/basic_analysis.html#see-also">See Also</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MMM from Scratch</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Mathematical Foundations</a></li>
+      <li class="breadcrumb-item active">Adstock Theory</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/theory/adstock.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="adstock-theory">
+<h1>Adstock Theory<a class="headerlink" href="#adstock-theory" title="Link to this heading"></a></h1>
+<p>The adstock transformation is a fundamental concept in Marketing Mix Modeling that captures how marketing effects persist over time.</p>
+<section id="mathematical-definition">
+<h2>Mathematical Definition<a class="headerlink" href="#mathematical-definition" title="Link to this heading"></a></h2>
+<p>The geometric adstock model is defined as:</p>
+<div class="math notranslate nohighlight">
+\[\text{Adstock}_t = \text{Media}_t + \alpha \cdot \text{Adstock}_{t-1}\]</div>
+<p>Where:
+- <span class="math notranslate nohighlight">\(\text{Adstock}_t\)</span> is the adstocked value at time <span class="math notranslate nohighlight">\(t\)</span>
+- <span class="math notranslate nohighlight">\(\text{Media}_t\)</span> is the raw media spend at time <span class="math notranslate nohighlight">\(t\)</span>
+- <span class="math notranslate nohighlight">\(\alpha\)</span> is the decay parameter (0 &lt; α &lt; 1)
+- <span class="math notranslate nohighlight">\(\text{Adstock}_{t-1}\)</span> is the adstocked value from the previous period</p>
+</section>
+<section id="interpretation">
+<h2>Interpretation<a class="headerlink" href="#interpretation" title="Link to this heading"></a></h2>
+<p>The adstock parameter <span class="math notranslate nohighlight">\(\alpha\)</span> controls the persistence of marketing effects:</p>
+<ul class="simple">
+<li><p><strong>High α (close to 1)</strong>: Marketing effects persist for many periods</p></li>
+<li><p><strong>Low α (close to 0)</strong>: Marketing effects decay quickly</p></li>
+</ul>
+<p>For example, with <span class="math notranslate nohighlight">\(\alpha = 0.8\)</span>:
+- 80% of the previous period’s effect carries over
+- 20% of the effect decays each period</p>
+</section>
+<section id="half-life-calculation">
+<h2>Half-Life Calculation<a class="headerlink" href="#half-life-calculation" title="Link to this heading"></a></h2>
+<p>The half-life of adstock effects can be calculated as:</p>
+<div class="math notranslate nohighlight">
+\[\text{Half-life} = \frac{\ln(0.5)}{\ln(\alpha)}\]</div>
+<p>This tells us how many periods it takes for half of the marketing effect to decay.</p>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Link to this heading"></a></h2>
+<p>Consider a media campaign with the following spend pattern:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">media_spend</span> <span class="o">=</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">75</span><span class="p">]</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.6</span>
+</pre></div>
+</div>
+<p>The adstocked values would be:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+\text{Adstock}_1 &amp;= 100 + 0.6 \cdot 0 = 100 \\
+\text{Adstock}_2 &amp;= 0 + 0.6 \cdot 100 = 60 \\
+\text{Adstock}_3 &amp;= 50 + 0.6 \cdot 60 = 86 \\
+\text{Adstock}_4 &amp;= 0 + 0.6 \cdot 86 = 51.6 \\
+\text{Adstock}_5 &amp;= 75 + 0.6 \cdot 51.6 = 105.96
+\end{align}\end{split}\]</div>
+</section>
+<section id="implementation">
+<h2>Implementation<a class="headerlink" href="#implementation" title="Link to this heading"></a></h2>
+<p>In our implementation, the adstock transformation is applied using the <code class="xref py py-func docutils literal notranslate"><span class="pre">geometric_adstock()</span></code> function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">src.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">geometric_adstock</span>
+
+<span class="c1"># Apply adstock transformation</span>
+<span class="n">adstocked_media</span> <span class="o">=</span> <span class="n">geometric_adstock</span><span class="p">(</span><span class="n">media_data</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="see-also">
+<h2>See Also<a class="headerlink" href="#see-also" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="xref py py-func docutils literal notranslate"><span class="pre">geometric_adstock()</span></code> - Implementation details</p></li>
+<li><p><span class="xref std std-doc">saturation</span> - Next step in the MMM pipeline</p></li>
+<li><p><span class="xref std std-doc">regression</span> - How adstocked data is used in modeling</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Mathematical Foundations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../api/index.html" class="btn btn-neutral float-right" title="API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Martin Cargnel.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

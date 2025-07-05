@@ -1,0 +1,278 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utilities Module &mdash; MMM from Scratch  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="../tutorials/index.html" />
+    <link rel="prev" title="Contributions Module" href="contributions.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            MMM from Scratch
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../theory/index.html">Mathematical Foundations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../theory/adstock.html">Adstock Theory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../theory/adstock.html#mathematical-definition">Mathematical Definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../theory/adstock.html#interpretation">Interpretation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../theory/adstock.html#half-life-calculation">Half-Life Calculation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../theory/adstock.html#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../theory/adstock.html#implementation">Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../theory/adstock.html#see-also">See Also</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="data_generation.html">Data Generation Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="data_generation.html#src.data_generation.gen_data"><code class="docutils literal notranslate"><span class="pre">gen_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="linear_regression.html">Linear Regression Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="linear_regression.html#src.linear_regression.LinearRegression"><code class="docutils literal notranslate"><span class="pre">LinearRegression</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="linear_regression.html#src.linear_regression.LinearRegression.df"><code class="docutils literal notranslate"><span class="pre">LinearRegression.df</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linear_regression.html#src.linear_regression.LinearRegression.y"><code class="docutils literal notranslate"><span class="pre">LinearRegression.y</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linear_regression.html#src.linear_regression.LinearRegression.x"><code class="docutils literal notranslate"><span class="pre">LinearRegression.x</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linear_regression.html#src.linear_regression.LinearRegression.fit"><code class="docutils literal notranslate"><span class="pre">LinearRegression.fit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linear_regression.html#src.linear_regression.LinearRegression.get_coefficients"><code class="docutils literal notranslate"><span class="pre">LinearRegression.get_coefficients()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linear_regression.html#src.linear_regression.LinearRegression.is_fitted"><code class="docutils literal notranslate"><span class="pre">LinearRegression.is_fitted</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="linear_regression.html#src.linear_regression.LinearRegression.summary"><code class="docutils literal notranslate"><span class="pre">LinearRegression.summary()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="contributions.html">Contributions Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="contributions.html#src.contributions.Contributions"><code class="docutils literal notranslate"><span class="pre">Contributions</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="contributions.html#src.contributions.Contributions.contribution_to_volume"><code class="docutils literal notranslate"><span class="pre">Contributions.contribution_to_volume()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="contributions.html#src.contributions.Contributions.decomposition"><code class="docutils literal notranslate"><span class="pre">Contributions.decomposition()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="contributions.html#src.contributions.Contributions.rel_contribution_to_volume"><code class="docutils literal notranslate"><span class="pre">Contributions.rel_contribution_to_volume()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="contributions.html#src.contributions.Contributions.roi"><code class="docutils literal notranslate"><span class="pre">Contributions.roi()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Utilities Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#src.utils.geometric_adstock"><code class="docutils literal notranslate"><span class="pre">geometric_adstock()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#src.utils.mean_scaling"><code class="docutils literal notranslate"><span class="pre">mean_scaling()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#src.utils.saturation"><code class="docutils literal notranslate"><span class="pre">saturation()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../examples/basic_analysis.html">Basic MMM Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../examples/basic_analysis.html#complete-analysis-script">Complete Analysis Script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/basic_analysis.html#expected-output">Expected Output</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/basic_analysis.html#key-insights">Key Insights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/basic_analysis.html#next-steps">Next Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/basic_analysis.html#see-also">See Also</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MMM from Scratch</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">API Reference</a></li>
+      <li class="breadcrumb-item active">Utilities Module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/utils.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-src.utils">
+<span id="utilities-module"></span><h1>Utilities Module<a class="headerlink" href="#module-src.utils" title="Link to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.utils.geometric_adstock">
+<span class="sig-prename descclassname"><span class="pre">src.utils.</span></span><span class="sig-name descname"><span class="pre">geometric_adstock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">series</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="../_modules/src/utils.html#geometric_adstock"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.utils.geometric_adstock" title="Link to this definition"></a></dt>
+<dd><p>Apply geometric adstock transformation to a time series.</p>
+<p>The adstock effect models how marketing impact persists over time using
+the formula: Adstock_t = Media_t + α * Adstock_{t-1}</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>series</strong> (<em>np.ndarray</em>) – Input time series data (e.g., media spend over time)</p></li>
+<li><p><strong>alpha</strong> (<em>float</em>) – Decay parameter controlling persistence (0 &lt; α &lt; 1).
+Higher values mean longer persistence of effects.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Adstocked time series with persistence effects</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">media_spend</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">75</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">adstocked</span> <span class="o">=</span> <span class="n">geometric_adstock</span><span class="p">(</span><span class="n">media_spend</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">adstocked</span><span class="p">)</span>
+<span class="go">[100.   60.   86.   51.6 105.96]</span>
+</pre></div>
+</div>
+<p class="rubric">Notes</p>
+<p>This implements the classic geometric adstock model used in
+marketing mix modeling to capture carryover effects of marketing
+activities. The half-life of effects can be calculated as
+ln(0.5) / ln(alpha).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.utils.mean_scaling">
+<span class="sig-prename descclassname"><span class="pre">src.utils.</span></span><span class="sig-name descname"><span class="pre">mean_scaling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variables</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="../_modules/src/utils.html#mean_scaling"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.utils.mean_scaling" title="Link to this definition"></a></dt>
+<dd><p>Apply mean scaling (centering) to specified variables in a DataFrame.</p>
+<p>Mean scaling subtracts the mean from each variable, centering the data
+around zero. This is useful for regression analysis and interpretation
+of coefficients.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pd.DataFrame</em>) – Input DataFrame containing the variables to scale</p></li>
+<li><p><strong>variables</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – List of column names to apply mean scaling to</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>DataFrame with new scaled columns (original columns + ‘_scaled’ suffix)</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;x1&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span> <span class="s1">&#39;x2&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">25</span><span class="p">]})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">scaled_df</span> <span class="o">=</span> <span class="n">mean_scaling</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;x1&#39;</span><span class="p">,</span> <span class="s1">&#39;x2&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">scaled_df</span><span class="p">[[</span><span class="s1">&#39;x1_scaled&#39;</span><span class="p">,</span> <span class="s1">&#39;x2_scaled&#39;</span><span class="p">]])</span>
+<span class="go">   x1_scaled  x2_scaled</span>
+<span class="go">0      -10.0      -10.0</span>
+<span class="go">1        0.0        0.0</span>
+<span class="go">2       10.0       10.0</span>
+</pre></div>
+</div>
+<p class="rubric">Notes</p>
+<p>This function creates new columns with ‘_scaled’ suffix rather than
+modifying the original columns. This preserves the original data
+for comparison and analysis.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.utils.saturation">
+<span class="sig-prename descclassname"><span class="pre">src.utils.</span></span><span class="sig-name descname"><span class="pre">saturation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lmd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="reference internal" href="../_modules/src/utils.html#saturation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#src.utils.saturation" title="Link to this definition"></a></dt>
+<dd><p>Apply saturation transformation to model diminishing returns.</p>
+<p>The saturation function transforms adstocked media data to model
+diminishing returns on marketing spend using a sigmoid-like curve.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>np.ndarray</em>) – Input data (typically adstocked media variables)</p></li>
+<li><p><strong>lmd</strong> (<em>float</em>) – Saturation parameter controlling the curve shape.
+Higher values create steeper saturation curves.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Saturated values between 0 and 1</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">adstocked_media</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">saturated</span> <span class="o">=</span> <span class="n">saturation</span><span class="p">(</span><span class="n">adstocked_media</span><span class="p">,</span> <span class="n">lmd</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">saturated</span><span class="p">)</span>
+<span class="go">[0.         0.46211716 0.76159416 0.88079708 0.96402758]</span>
+</pre></div>
+</div>
+<p class="rubric">Notes</p>
+<p>This function uses the formula: (1 - exp(-λx)) / (1 + exp(-λx))
+which creates an S-shaped curve that models diminishing returns
+on marketing investment. The parameter λ controls how quickly
+saturation occurs.</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="contributions.html" class="btn btn-neutral float-left" title="Contributions Module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../tutorials/index.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Martin Cargnel.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
