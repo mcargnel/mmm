@@ -43,5 +43,16 @@ html_theme_options = {
     'collapse_navigation': False,
     'sticky_navigation': True,
     'includehidden': True,
-    'titles_only': False
+    'titles_only': False,
+    'display_version': False,
+    'prev_next_buttons_location': 'bottom',
+    'style_external_links': True,
+    'style_nav_header_background': '#2980B9'
 }
+
+# Additional options for better GitHub Pages compatibility
+html_use_index = True
+html_split_index = False
+html_show_sourcelink = False
+html_show_sphinx = False
+html_show_copyright = True
