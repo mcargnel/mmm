@@ -34,20 +34,52 @@ sys.path.insert(0, os.path.abspath('../..'))
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'alabaster'
 html_static_path = ['_static']
 
-# Theme options for Read the Docs theme
+# Theme options for Alabaster theme
 html_theme_options = {
+    'logo': 'logo.png',
+    'logo_name': True,
+    'logo_text_align': 'center',
+    'description': 'Marketing Mix Model from Scratch',
+    'github_user': 'mcargnel',
+    'github_repo': 'mmm',
+    'github_button': True,
+    'github_type': 'star',
+    'github_count': True,
+    'travis_button': False,
+    'codecov_button': False,
+    'analytics_id': '',
+    'font_family': "'Roboto', Georgia, serif",
+    'head_font_family': "'Roboto', 'Arial', sans-serif",
+    'font_size': '16px',
+    'page_width': '940px',
+    'sidebar_width': '220px',
+    'sidebar_collapse': True,
+    'sidebar_includehidden': True,
     'navigation_depth': 4,
-    'collapse_navigation': False,
-    'sticky_navigation': True,
-    'includehidden': True,
     'titles_only': False,
-    'display_version': False,
-    'prev_next_buttons_location': 'bottom',
-    'style_external_links': True,
-    'style_nav_header_background': '#2980B9'
+    'show_powered_by': False,
+    'show_related': True,
+    'show_relbars': True,
+    'show_sphinx': False,
+    'show_source': False,
+    'sidebar_header': '#2980B9',
+    'sidebar_text': '#333',
+    'sidebar_link': '#2980B9',
+    'sidebar_link_underscore': '#2980B9',
+    'sidebar_list': '#666',
+    'sidebar_rss': '#ff6b6b',
+    'sidebar_search_button': '#2980B9',
+    'sidebar_search_button_text': '#fff',
+    'relbar_border': '#2980B9',
+    'relbar_link': '#2980B9',
+    'relbar_link_underscore': '#2980B9',
+    'footer_bg': '#2980B9',
+    'footer_text': '#fff',
+    'footer_link': '#fff',
+    'footer_link_underscore': '#fff'
 }
 
 # Additional options for better GitHub Pages compatibility
