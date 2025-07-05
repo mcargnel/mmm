@@ -161,6 +161,17 @@ cd docs && make html
 - **Tutorials**: Step-by-step guides
 - **Examples**: Practical use cases
 
-The documentation is available at `docs/build/html/index.html` after building.
+### 📖 **View Documentation Online**
+
+Once GitHub Pages is enabled, your documentation will be available at:
+**https://mcargnel.github.io/mmm/**
+
+### 📁 **Direct File Access**
+- [Main Documentation](https://github.com/mcargnel/mmm/blob/development/docs/build/html/index.html)
+- [API Reference](https://github.com/mcargnel/mmm/blob/development/docs/build/html/api/index.html)
+- [Theory Pages](https://github.com/mcargnel/mmm/blob/development/docs/build/html/theory/index.html)
+- [Tutorials](https://github.com/mcargnel/mmm/blob/development/docs/build/html/tutorials/index.html)
+
+The documentation is also available locally at `docs/build/html/index.html` after building.
 
 **Remember**: This project is about learning and understanding MMM from first principles. Take time to experiment with parameters, understand the mathematics, and build intuition for how marketing mix modeling works!
