@@ -8,8 +8,7 @@ from src.contributions import Contributions
 print("Generating Data")
 df = gen_data()
 
-indep_vars = ['x1_sat', 'x2_sat', 'trend',
-'seasonality', 'event_1']
+indep_vars = ['x1_sat', 'x2_sat','event_1']
 
 lm = LinearRegression(df, 'y',indep_vars)
 
