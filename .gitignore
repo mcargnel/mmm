@@ -3,3 +3,4 @@ venv_mmm_310/
 .cursor/rules/
 scripts/
 working_with_repos.md
+lm_optimizers.ipynb

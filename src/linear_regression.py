@@ -12,7 +12,10 @@ class LinearRegression:
         x (List[str]): List of predictor variable names
     """
     
-    def __init__(self, df: pd.DataFrame, y: str, x: List[str]):
+    def __init__(self,
+                 df: pd.DataFrame,
+                 y: str,
+                 x: List[str]):
         """
         Initialize LinearRegression model.
         

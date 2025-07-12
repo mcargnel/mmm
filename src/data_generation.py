@@ -41,11 +41,11 @@ def gen_data(beta_1 =3.0, beta_2 = 2.0, beta_event = 1.5, intercept = 2.0):
     df['x1_sat'] = saturation(df['x1_adstocked'], 2)
     df['x2_sat'] = saturation(df['x2_adstocked'], 5)
 
-    df['trend'] = (np.linspace(start=0.0, stop=50, num=n) + 10) ** (1/4) -1
+    #df['trend'] = (np.linspace(start=0.0, stop=50, num=n) + 10) ** (1/4) -1
 
-    df["cs"] = -np.sin(2 * 2 * np.pi * df["day_of_year"] / 365.5)
-    df["cc"] = np.cos(1 * 2 * np.pi * df["day_of_year"] / 365.5)
-    df["seasonality"] = 0.5 * (df["cs"] + df["cc"])
+    #df["cs"] = -np.sin(2 * 2 * np.pi * df["day_of_year"] / 365.5)
+    #df["cc"] = np.cos(1 * 2 * np.pi * df["day_of_year"] / 365.5)
+    #df["seasonality"] = 0.5 * (df["cs"] + df["cc"])
 
     df['event_1'] = (df['date_week'] == "1997-06-09").astype(float)
 
@@ -55,8 +55,8 @@ def gen_data(beta_1 =3.0, beta_2 = 2.0, beta_event = 1.5, intercept = 2.0):
     betas = [beta_1, beta_2]
     df['y'] = (
         df['intercept'] + 
-        df['trend'] + 
-        df['seasonality'] + 
+        #df['trend'] + 
+        #df['seasonality'] + 
         beta_event * df['event_1'] + 
         beta_1 * df['x1_sat'] + 
         beta_2 * df['x2_sat'] + 
